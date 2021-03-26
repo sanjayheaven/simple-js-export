@@ -1,6 +1,7 @@
 # <center>simple-js-export</center>
 
 [![npm](https://img.shields.io/npm/v/simple-js-export)](https://www.npmjs.com/package/simple-js-export)
+[![CI](https://github.com/sanjayheaven/simple-js-export/actions/workflows/ci.yaml/badge.svg)](https://github.com/sanjayheaven/simple-js-export/actions/workflows/ci.yaml)
 
 - Quick & Simple export to CSV in the browser.
 - Add Excel data export in the **future** version
