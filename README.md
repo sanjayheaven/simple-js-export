@@ -3,6 +3,7 @@
 [![npm](https://img.shields.io/npm/v/simple-js-export)](https://www.npmjs.com/package/simple-js-export)
 
 - Quick & Simple export to CSV in the browser.
+- Add Excel data export in the **future** version
 
 ## Install
 
