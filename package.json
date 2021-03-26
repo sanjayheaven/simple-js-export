@@ -15,7 +15,7 @@
   "scripts": {
     "buildDev": "webpack --config webpack.config.js --progress --mode development --watch",
     "buildProd": "webpack --config webpack.config.js --progress --mode production --watch",
-    "test": "echo \"This is workflows test\" "
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
@@ -24,6 +24,7 @@
     "webpack": "^5.28.0"
   },
   "devDependencies": {
+    "jest": "^26.6.3",
     "webpack-cli": "^4.5.0"
   }
 }
