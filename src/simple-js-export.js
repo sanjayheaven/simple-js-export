@@ -21,7 +21,7 @@ const exportCSV = function ({
   columns = [],
   fileName = "simple-js-export",
   delimiter = ",",
-}) {
+} = {}) {
   if (!Array.isArray(data) || !Array.isArray(columns)) {
     throw new TypeError("Data & Columns should be Array type")
   }
@@ -59,5 +59,5 @@ const exportCSV = function ({
   }
   return instance
 }
-export const defaultOptions = exportCSV({}).options
+export const defaultOptions = exportCSV().options
 export default exportCSV
