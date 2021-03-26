@@ -59,5 +59,5 @@ const exportCSV = function ({
   }
   return instance
 }
-export const defaultOptions = exportCSV().instance.options
+export const defaultOptions = exportCSV({}).options
 export default exportCSV
