@@ -1,4 +1,4 @@
-# <center>simple-simple-js-export</center>
+# <center>simple-js-export</center>
 
 [![npm](https://img.shields.io/npm/v/simple-js-export)](https://www.npmjs.com/package/simple-js-export)
 
@@ -35,12 +35,12 @@ exportCSV({ data, columns }).save()
 
 ## Option Properties
 
-| Property  | Description                                     | Required |  Type  |    Default    |
-| :-------- | :---------------------------------------------- | :------: | :----: | :-----------: |
-| data      | Data to be exported into file                   |    ✔     | Array  |      []       |
-| columns   | Columns setting of datasource [config](#Column) |    ✔     | Array  |      []       |
+| Property  | Description                                     | Required |  Type  |     Default      |
+| :-------- | :---------------------------------------------- | :------: | :----: | :--------------: |
+| data      | Data to be exported into file                   |    ✔     | Array  |        []        |
+| columns   | Columns setting of datasource [config](#Column) |    ✔     | Array  |        []        |
 | fileName  | Filename to export                              |          | String | simple-js-export |
-| delimiter | Delimiter                                       |          | String |       ,       |
+| delimiter | Delimiter                                       |          | String |        ,         |
 
 ## Column
 

@@ -4,6 +4,7 @@
   "description": "",
   "main": "dist/simple-js-export.js",
   "keywords": [
+    "js",
     "export",
     "csv"
   ],
