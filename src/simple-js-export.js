@@ -19,7 +19,7 @@ const isFunction = (item) => {
 const exportCSV = function ({
   data = [],
   columns = [],
-  fileName = "js-export-csv",
+  fileName = "simple-js-export",
   delimiter = ",",
 }) {
   if (!Array.isArray(data) || !Array.isArray(columns)) {

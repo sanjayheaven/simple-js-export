@@ -1,4 +1,4 @@
-import exportCSV from "js-export-csv"
+import exportCSV from "simple-js-export"
 
 const data = [...Array(100)].map((item) => {
   return {
