@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - "simple-js-export.js"
+      - "src/simple-js-export.js"
 jobs:
   build:
     runs-on: ubuntu-latest
