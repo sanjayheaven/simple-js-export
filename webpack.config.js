@@ -5,7 +5,12 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "simple-js-export.js",
-    libraryTarget: "umd",
+    library: {
+      name: "SimpleJsExport",
+      type: "umd",
+      export: "default",
+      auxiliaryComment: "SimpleJsExport",
+    },
   },
   module: {
     rules: [
