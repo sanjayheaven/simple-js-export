@@ -7,4 +7,15 @@ module.exports = {
     filename: "simple-js-export.js",
     libraryTarget: "umd",
   },
+  module: {
+    rules: [
+      {
+        test: /\.js?$/,
+        exclude: /(node_modules)/,
+      },
+    ],
+  },
+  performance: {
+    hints: false,
+  },
 }
