@@ -20,6 +20,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dtsmake": "0.0.10",
     "webpack": "^5.28.0"
   },
   "devDependencies": {
