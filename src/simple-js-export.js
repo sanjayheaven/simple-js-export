@@ -25,8 +25,13 @@ const exportCSV = function ({
   if (!Array.isArray(data) || !Array.isArray(columns)) {
     throw new TypeError("Data & Columns should be Array type")
   }
-
   const instance = {
+    options: {
+      data,
+      columns,
+      fileName,
+      delimiter,
+    },
     save: function () {
       if (typeof columns[0] == "string") {
         let res = data.reduce((acc, item) => {
@@ -54,4 +59,5 @@ const exportCSV = function ({
   }
   return instance
 }
+export const defaultOptions = exportCSV().instance.options
 export default exportCSV
