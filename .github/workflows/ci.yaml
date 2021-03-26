@@ -1,6 +1,11 @@
 name: ci
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "simple-js-export.js"
 jobs:
   build:
     runs-on: ubuntu-latest
