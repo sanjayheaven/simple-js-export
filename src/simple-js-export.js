@@ -1,4 +1,5 @@
 const download = function (csvContent, fileName) {
+  csvContent = "\ufeff" + csvContent
   let blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" })
   let link = document.createElement("a")
   let url = URL.createObjectURL(blob)
