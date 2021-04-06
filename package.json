@@ -18,9 +18,10 @@
     "test": "jest"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "dtsmake": "0.0.10",
+    "semver": "^7.3.5",
     "webpack": "^5.28.0"
   },
   "devDependencies": {
