@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../dist/simple-js-export.js"></script>
+  </head>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      height: 100%;
+    }
+    .button-container {
+      padding: 10% 0%;
+    }
+    button {
+      cursor: pointer;
+      margin: 0 auto;
+      font-size: 20px;
+      padding: 10px 100px;
+    }
+  </style>
+  <body>
+    <div class="button-container">
+      <button id="button">Save</button>
+    </div>
+    <script>
+      const data = [...Array(100)].map((item, index) => {
+        return {
+          name: "name" + index,
+          code: "code" + index,
+          year: "year" + index,
+        }
+      })
+      const columns = [
+        { title: "NAME", dataIndex: "name" },
+        { title: "CODE", dataIndex: "code" },
+        { title: "YEAR", dataIndex: "year" },
+      ]
+      document.getElementById("button").addEventListener("click", () => {
+        let options = { data, columns }
+        SimpleJsExport(options).save()
+      })
+    </script>
+  </body>
+  <style>
+    body {
+      margin: auto;
+    }
+  </style>
+</html>

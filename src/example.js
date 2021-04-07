@@ -1,10 +1,10 @@
-import exportCSV from "simple-js-export"
+const SimpleJsExport = require("../dist/simple-js-export")
 
-const data = [...Array(100)].map((item) => {
+const data = [...Array(10000)].map((item, index) => {
   return {
-    name: "name" + item,
-    code: "code" + item,
-    year: "year" + item,
+    name: "name" + index,
+    code: "code" + index,
+    year: "year" + index,
   }
 })
 const columns = [
@@ -13,4 +13,4 @@ const columns = [
   { title: "YEAR", dataIndex: "year" },
 ]
 
-exportCSV({ data, columns }).save()
+SimpleJsExport({ data, columns }).save()

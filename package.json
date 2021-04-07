@@ -20,9 +20,13 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@babel/preset-react": "^7.13.13",
+    "babel-loader": "^8.2.2",
     "dtsmake": "0.0.10",
+    "node-polyfill-webpack-plugin": "^1.1.0",
     "semver": "^7.3.5",
-    "webpack": "^5.28.0"
+    "webpack": "^5.28.0",
+    "webpack-node-externals": "^2.5.2"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.13.12",

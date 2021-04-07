@@ -1,5 +1,9 @@
-const download = function (csvContent, fileName) {
-  csvContent = "\ufeff" + csvContent
+const isNode = typeof window === "undefined"
+const isFunction = (item) => {
+  return Object.prototype.toString.call(item) === "[object Function]"
+}
+
+const browserDownload = function (csvContent, fileName) {
   let blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" })
   let link = document.createElement("a")
   let url = URL.createObjectURL(blob)
@@ -10,11 +14,19 @@ const download = function (csvContent, fileName) {
   document.body.removeChild(link)
 }
 
-const isObject = (item) => {
-  return Object.prototype.toString.call(item) === "[object Object]"
+const nodeDownload = function (csvContent, fileName) {
+  const fs = require("fs")
+  fs.writeFileSync(fileName, csvContent)
 }
-const isFunction = (item) => {
-  return Object.prototype.toString.call(item) === "[object Function]"
+
+const download = function (csvContent, fileName) {
+  csvContent = "\ufeff" + csvContent
+  console.log(isNode)
+  if (isNode) {
+    nodeDownload(csvContent, fileName)
+  } else {
+    browserDownload(csvContent, fileName)
+  }
 }
 
 const exportCSV = function ({
@@ -26,13 +38,8 @@ const exportCSV = function ({
   if (!Array.isArray(data) || !Array.isArray(columns)) {
     throw new TypeError("Data & Columns should be Array type")
   }
-  const instance = {
-    options: {
-      data,
-      columns,
-      fileName,
-      delimiter,
-    },
+  return {
+    options: { data, columns, fileName, delimiter },
     save: function () {
       if (typeof columns[0] == "string") {
         let res = data.reduce((acc, item) => {
@@ -58,7 +65,7 @@ const exportCSV = function ({
       }
     },
   }
-  return instance
 }
+
 export const defaultOptions = exportCSV().options
 export default exportCSV
