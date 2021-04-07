@@ -9,20 +9,46 @@
 
 ## Install
 
-```shell
- npm install simple-js-export
+### browser
+
+```js
+<script src="dist/simple-js-export.js"></script>
 ```
+
+### npm
+
+```shell
+ npm i simple-js-export
+```
+
+###
 
 ## Example
 
-```js
-import exportCSV from "simple-js-export"
+**In a browser**
 
-const data = [...Array(100)].map((item) => {
+```js
+const data = [...Array(100)].map((item, index) => {
+  return { name: "name" + index, code: "code" + index }
+})
+const columns = [
+  { title: "NAME", dataIndex: "name" },
+  { title: "CODE", dataIndex: "code" },
+]
+SimpleJsExport({ data, columns }).save()
+```
+
+**In Node.js**
+
+##
+
+```js
+const simpleJsExport = require("simple-js-export")
+const data = [...Array(100)].map((item, index) => {
   return {
-    name: "name" + item,
-    code: "code" + item,
-    year: "year" + item,
+    name: "name" + index,
+    code: "code" + index,
+    year: "year" + index,
   }
 })
 const columns = [
@@ -30,16 +56,14 @@ const columns = [
   { title: "CODE", dataIndex: "code" },
   { title: "YEAR", dataIndex: "year" },
 ]
-
-exportCSV({ data, columns }).save()
+simpleJsExport({ data, columns }).save()
 ```
 
 Well, it seems a real trouble to set [Column](#Column) both **_title_** & **_dataIndex_** every time.  
 It is also allowed to set **Only** the **_title_**, provided that each item in the **data** has the same format content.
 
 ```js
-import exportCSV from "simple-js-export"
-
+const simpleJsExport = require("simple-js-export")
 const data = [...Array(100)].map((item) => {
   return {
     name: "name" + item,
@@ -48,8 +72,7 @@ const data = [...Array(100)].map((item) => {
   }
 })
 const columns = ["NAME", "CODE", "YEAR"]
-
-exportCSV({ data, columns }).save()
+simpleJsExport({ data, columns }).save()
 ```
 
 ## Option Properties
