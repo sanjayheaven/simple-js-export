@@ -43,7 +43,7 @@ SimpleJsExport({ data, columns }).save()
 ##
 
 ```js
-const simpleJsExport = require("simple-js-export")
+const SimpleJsExport = require("simple-js-export")
 const data = [...Array(100)].map((item, index) => {
   return {
     name: "name" + index,
@@ -56,14 +56,14 @@ const columns = [
   { title: "CODE", dataIndex: "code" },
   { title: "YEAR", dataIndex: "year" },
 ]
-simpleJsExport({ data, columns }).save()
+SimpleJsExport({ data, columns }).save()
 ```
 
 Well, it seems a real trouble to set [Column](#Column) both **_title_** & **_dataIndex_** every time.  
 It is also allowed to set **Only** the **_title_**, provided that each item in the **data** has the same format content.
 
 ```js
-const simpleJsExport = require("simple-js-export")
+const SimpleJsExport = require("simple-js-export")
 const data = [...Array(100)].map((item) => {
   return {
     name: "name" + item,
@@ -72,7 +72,7 @@ const data = [...Array(100)].map((item) => {
   }
 })
 const columns = ["NAME", "CODE", "YEAR"]
-simpleJsExport({ data, columns }).save()
+SimpleJsExport({ data, columns }).save()
 ```
 
 ## Option Properties
