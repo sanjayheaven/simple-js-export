@@ -1,4 +1,7 @@
 const isNode = typeof window === "undefined"
+const fs = require("fs")
+const csvNewLine = "\n"
+
 const isFunction = (item) => {
   return Object.prototype.toString.call(item) === "[object Function]"
 }
@@ -15,7 +18,6 @@ const browserDownload = function (csvContent, fileName) {
 }
 
 const nodeDownload = function (csvContent, fileName) {
-  const fs = require("fs")
   fs.writeFileSync(fileName, csvContent)
 }
 
@@ -46,8 +48,8 @@ const exportCSV = function ({
           return (acc +=
             Object.keys(item)
               .map((i) => item[i])
-              .join(delimiter) + "\n")
-        }, columns.join(delimiter) + "\n")
+              .join(delimiter) + csvNewLine)
+        }, columns.join(delimiter) + csvNewLine)
         download(res, fileName + ".csv")
       }
       if (typeof columns[0] == "object") {
@@ -59,8 +61,8 @@ const exportCSV = function ({
               acc = acc + `"${item[col.dataIndex] || ""}"` + delimiter
             }
           })
-          return (acc += "\n")
-        }, columns.map((i) => i.title).join(delimiter) + "\n")
+          return (acc += csvNewLine)
+        }, columns.map((i) => i.title).join(delimiter) + csvNewLine)
         download(res, fileName + ".csv")
       }
     },
