@@ -90,7 +90,10 @@ SimpleJsExport({ data, columns }).save()
 
 ## Column
 
-| Property  | Description              | Required | Type   | Default |
-| :-------- | ------------------------ | :------: | ------ | :-----: |
-| title     | Title of the column      |    ✔     | String |    -    |
-| dataIndex | Field of the data record |    ✔     | String |    -    |
+| Property    | Description                     | Required | Type    | Default |
+| :---------- | ------------------------------- | :------: | ------- | :-----: |
+| title       | Title of the column             |    ✔     | String  |    -    |
+| dataIndex   | Field of the data record        |    ✔     | String  |    -    |
+| forceString | Date expected to be String type |          | Boolean |  false  |
+
+## Other

@@ -43,6 +43,7 @@ const exportCSV = function ({
   return {
     options: { data, columns, fileName, delimiter },
     save: function () {
+      console.log(typeof columns[0])
       if (typeof columns[0] == "string") {
         let res = data.reduce((acc, item) => {
           return (acc +=
@@ -58,7 +59,13 @@ const exportCSV = function ({
             if (isFunction(col.render)) {
               acc = acc + `"${col.render(item[col.dataIndex])}"` + delimiter
             } else {
-              acc = acc + `"${item[col.dataIndex] || ""}"` + delimiter
+              acc =
+                acc +
+                `"${
+                  (item[col.dataIndex] || "") +
+                  ((col.forceString && "\t") || "")
+                }"` +
+                delimiter
             }
           })
           return (acc += csvNewLine)
