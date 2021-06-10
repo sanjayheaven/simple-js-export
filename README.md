@@ -9,7 +9,7 @@
 
 ## 💡💡💡
 
-In Node situation, sometimes datasouce could be a big file or from Http. Well, use Stream to deal with it ?
+In Node situation, sometimes datasource could be a big file or from Http. Well, use Stream to deal with it ?
 
 ## Install
 
