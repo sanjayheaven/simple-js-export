@@ -31,7 +31,6 @@ const download = function (csvContent, fileName) {
   }
 }
 
-
 const exportCSV = function ({
   data = [],
   columns = [],
