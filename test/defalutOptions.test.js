@@ -6,6 +6,5 @@ describe("defaultOptions", () => {
     expect(Array.isArray(defaultOptions.columns)).toBe(true)
     expect(defaultOptions.fileName).toBe("simple-js-export")
     expect(defaultOptions.delimiter).toBe(",")
-    expect(defaultOptions.forceString).toBe(false)
   })
 })
