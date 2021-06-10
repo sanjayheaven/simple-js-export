@@ -2,3 +2,4 @@ node_modules
 src/test.js
 big.file2
 *.csv
+dist/simple-js-export.js
