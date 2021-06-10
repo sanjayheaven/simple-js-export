@@ -7,6 +7,10 @@
 - Quick & Simple export to CSV in **Browser** or in **Node** .
 - Add Excel data export in the **future** version
 
+## 💡💡💡
+
+In Node situation, sometimes datasouce could be a big file or from Http. Well, use Stream to deal with it ?
+
 ## Install
 
 ### browser
