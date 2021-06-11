@@ -9,7 +9,9 @@
 
 ## 💡💡💡
 
-In Node situation, sometimes datasource could be a big file or from Http. Well, use Stream to deal with it ?
+- In Node situation, sometimes datasource could be a big file or from Http. Well, use Stream to deal with it ?
+- What if the data item is like "payment.status"? should We auto get the status from the payment Object ?
+- Aborting the render option is right ?
 
 ## Install
 
